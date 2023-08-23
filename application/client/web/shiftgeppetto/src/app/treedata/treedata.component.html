@@ -1,0 +1,26 @@
+<h2 class="screen-align">Treedata</h2>
+
+<div>
+    <nz-tree #nzTree [nzData]="nodes" [nzShowExpand]="true" [nzDraggable]="true"
+    (nzClick)="nodeClicked($event)" [nzTreeTemplate]="nzTreeTemplate"></nz-tree>
+    <!-- [nzDefaultExpandAll]="true" -->
+    <ng-template #nzTreeTemplate let-node> <span class="custom-node" draggable="true" aria-grabbed="true" [class.active]="node.isselected">
+                    <span [class.shine-animate]="node.origin.isLoading">
+                        <i nz-icon [nzType]="node.isexpanded ? 'folder-open' : 'folder'" (click)="openFolder(node)"></i>
+                        <!-- <i class="anticon anticon-folder-open" *ngIf="node.isexpanded" (click)="openFolder(node)"></i> -->
+                        <span class="folder-name">{{node.title}}</span>
+
+        <!--(click)="open(node)"-->&nbsp;&nbsp; <a (click)="GpTreeRoute(node)"><i class="fa fa-plus" aria-hidden="true"></i></a> &nbsp;&nbsp;
+        <a
+        *ngIf="!node.isDisabled" (click)="GpRoute(node.origin.object._id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a> <a class="folder-delete" *ngIf="!node.isDisabled" (click)="delete(node)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+
+            </span>
+            </span>
+            <!-- <nz-tree-node *nzTreeNodeDef="let node; when: hasNoContent" nzTreeNodeIndentLine>
+                    <input nz-input placeholder="Input node name" nzSize="small" #inputElement />
+                    &nbsp;
+                    <button nz-button nzSize="small" (click)="saveNode(node, inputElement.value)">Add</button>
+                </nz-tree-node> -->
+    </ng-template>
+</div>

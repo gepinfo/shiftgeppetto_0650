@@ -1,0 +1,20 @@
+<h2 class="screen-align">Updeltree</h2>
+<div id="template-ilnz" class="gjs-row">
+    <div id="template-ip0p" class="gjs-cell">
+        <label id="template-izhl" class="label ">Name</label>
+        <input id="template-i6pul" [(ngModel)]="treeentity.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+    <div id="template-in3h" class="gjs-cell">
+        <label id="template-i5qt" class="label ">Email</label>
+        <input id="template-ilann" [(ngModel)]="treeentity.email"
+        [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "
+        />
+    </div>
+</div>
+<div id="template-io1k" class="gjs-row">
+    <div id="template-i9fc" class="gjs-cell">
+        <div id="template-i4k68" (click)="GpUpdate()" class="button btn btn-primary ">Update</div>
+        <div id="template-ibkj6" (click)="GpDelete()" class="button btn btn-danger ">Delete</div>
+    </div>
+</div>

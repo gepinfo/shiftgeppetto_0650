@@ -1,0 +1,201 @@
+---
+openapi: 3.0.0
+info:
+   version: 1.3.0
+   title: shiftgeppetto open api specification
+   description: shifttreecrud API
+   termsOfService: http://api_url/terms/
+   contact:
+      name: ContactName
+      email: hello@wolox.co
+      url: https://www.wolox.com.ar/
+   license:
+      name: Apache 2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+   - url: http://localhost:8011
+     description: shifttreecrud
+tags:
+- name: treeentity
+paths:
+   "/treeentity/{id}":
+      delete:
+         tags:
+         -  treeentity
+         description: GpDelete
+         parameters:
+         -  in: "path"
+            description: GpDelete
+            name: id
+            required: true
+            schema:
+               type: "string"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      get:
+         tags:
+         -  treeentity
+         description: GpGetEntityById
+         parameters:
+         -  in: "path"
+            description: GpGetEntityById
+            name: id
+            required: true
+            schema:
+               type: "string"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/treeentity/get/search":
+      get:
+         tags:
+         -  treeentity
+         description: GpSearch
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/treeentity/get/update":
+      put:
+         tags:
+         -  treeentity
+         description: GpSearchForUpdate
+         requestBody:
+            content:
+               application/json:
+                  schema:
+                     $ref: "#/components/schemas/treeentity"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/treeentity":
+      put:
+         tags:
+         -  treeentity
+         description: GpUpdate
+         requestBody:
+            content:
+               application/json:
+                  schema:
+                     $ref: "#/components/schemas/treeentity"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      get:
+         tags:
+         -  treeentity
+         description: GpGetAllValues
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      post:
+         tags:
+         -  treeentity
+         description: GpCreate
+         requestBody:
+            content:
+               application/json:
+                  schema:
+                     $ref: "#/components/schemas/treeentity"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/treeentity/userid/created_by":
+      get:
+         tags:
+         -  treeentity
+         description: GpGetNounCreatedBy
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/treeentity/get/tree":
+      get:
+         tags:
+         -  treeentity
+         description: GpGetAllTree
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+components:
+   schemas:
+      treeentity:
+         type: object
+         properties:
+            name:
+               type: "string"
+               description: Description
+            email:
+               type: "string"
+               description: Description
+            isExpanded:
+               type: "boolean"
+               description: Description
+            isSelected:
+               type: "boolean"
+               description: Description
+            isLeaf:
+               type: "boolean"
+               description: Description
+            parent_id:
+               type: "string"
+               description: Description
+            id:
+               type: "string"
+               description: Description
+            category:
+               type: "string"
+               description: Description
