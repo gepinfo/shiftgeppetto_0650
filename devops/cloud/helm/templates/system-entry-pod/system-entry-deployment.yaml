@@ -46,3 +46,6 @@ spec:
 
             - name: SHIFTTREECRUDURL
               value: "http://{{ .Values.app.prefix }}-app.{{ .Values.app.namespace }}.svc.cluster.local:8011"
+
+            - name: TYPESURL
+              value: "http://{{ .Values.app.prefix }}-app.{{ .Values.app.namespace }}.svc.cluster.local:8012"

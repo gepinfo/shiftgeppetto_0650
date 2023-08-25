@@ -28,5 +28,9 @@ spec:
     port: {{ .Values.service.shifttreecrud.port }}
     targetPort: {{ .Values.service.shifttreecrud.targetPort }}
 
+  - name: {{ .Values.service.types.name }}
+    port: {{ .Values.service.types.port }}
+    targetPort: {{ .Values.service.types.targetPort }}
+
   selector:
     name: {{ .Values.app.prefix }}-app

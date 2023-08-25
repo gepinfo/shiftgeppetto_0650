@@ -1,20 +1,20 @@
 export const seedTree = [{
-    "id": "j3t67j",
+    "id": "1ajl6o",
     "parent_id": null,
     "description": "tree data static field added",
     "name": "user"
 }, {
-    "id": "r8b8ze",
+    "id": "ofh9zp",
     "parent_id": null,
     "description": "tree data static field added",
     "name": "products"
 }, {
-    "id": "skqiga",
+    "id": "c1ok5s",
     "parent_id": null,
     "description": "tree data static field added",
     "name": "prices"
 }, {
-    "id": "m5ji2m",
+    "id": "nkwlp6",
     "parent_id": null,
     "description": "tree data static field added",
     "name": "payment"

@@ -11,5 +11,7 @@
 {"resources":"updeltree", "role":"Guest"}
     ,
 {"resources":"treedata", "role":"Guest"}
+    ,
+{"resources":"createtypes", "role":"Guest"}
     
 ]

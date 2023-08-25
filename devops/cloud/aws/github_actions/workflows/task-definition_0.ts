@@ -48,6 +48,50 @@ module.exports = {
                 "credentialsParameter": ""
             }
         },          
+        {
+            "name": "types-0650",
+            "image": `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-shiftgeppetto-0650-types:latest`,
+            "memoryReservation": "300",
+            "resourceRequirements": null,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": "8012",
+                    "protocol": "tcp",
+                    "hostPort": "8012"
+                }
+            ],
+            "environmentFiles": null,
+            "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@shiftgeppetto.local:27017/shiftgeppetto_0650?authSource=admin"},{"name":"MONGO_DOMAIN","value":"shiftgeppetto.local"},{"name":"CAMUNDAPOD_URL","value":"http://shiftgeppetto.local:8080"},{"name":"SECURITYURL","value":"http://shiftgeppetto.local:8003"},{"name":"AUTHPROXYURL","value":"http://shiftgeppetto.local:8001"},{"name":"ADMINURL","value":"http://shiftgeppetto.local:8004"},{"name":"CAMUNDAURL","value":"http://shiftgeppetto.local:8002"},{"name":"GCAMURL","value":"http://shiftgeppetto.local:8007"},{"name":"APIGATEWAY","value":"http://shiftgeppetto.local:8000"}],
+            "secrets": null,
+            "mountPoints": [
+                {
+                  "readOnly": null,
+                  "containerPath": "/path/to/container",
+                  "sourceVolume": "shiftgeppetto"
+                }
+              ],
+            "volumesFrom": null,
+            "hostname": null,
+            "user": null,
+            "workingDirectory": null,
+            "extraHosts": null,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/shiftgeppetto",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs",
+                    "awslogs-create-group": "true"
+                }
+            },
+            "ulimits": null,
+            "dockerLabels": null,
+            "dependsOn": null,
+            "repositoryCredentials": {
+                "credentialsParameter": ""
+            }
+        },          
     ],
     "volumes": [
         {

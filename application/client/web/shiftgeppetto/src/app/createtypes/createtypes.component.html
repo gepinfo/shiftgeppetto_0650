@@ -1,0 +1,23 @@
+<h2 class="screen-align">Createtypes</h2>
+<div id="template-ithe" class="gjs-row">
+    <div id="template-iaes" class="gjs-cell">
+        <label id="template-iyqm" class="label ">Name
+            <br id="template-iqmvh" class="">
+        </label>
+        <input id="template-itmzi" [(ngModel)]="types.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+        <div id="template-ibtt9" (click)="GpCreate()" class="button btn btn-primary ">Send</div>
+    </div>
+    <div id="template-ia9s" class="gjs-cell">
+        <label id="template-ix9o" class="label ">Description</label>
+        <input id="template-iafml" [(ngModel)]="types.description"
+        [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "
+        />
+    </div>
+    <div id="template-i8qd" class="gjs-cell">
+        <label id="template-ic8i" class="label ">priority</label>
+        <input id="template-iykel" [(ngModel)]="types.priority"
+        [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "
+        />
+    </div>
+</div>

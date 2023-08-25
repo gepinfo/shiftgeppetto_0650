@@ -157,6 +157,7 @@ services:
       - systemcredentialmanager
       - systementry
       - shifttreecrud
+      - types
 
     logging:
       driver: "fluentd"
@@ -245,6 +246,25 @@ services:
     container_name: shifttreecrud-0650
     ports: 
       - 8011:8011
+    env_file: .env
+    depends_on:
+      - mongo
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 0.0.0.0:24224
+        fluentd-async-connect: "true"
+        tag: fluent
+    mem_limit: 300m
+    mem_reservation: 150m
+    cpus: 0.2
+
+  types: 
+    build: ../../../application/services/custom_services/types
+    image: types-0650
+    container_name: types-0650
+    ports: 
+      - 8012:8012
     env_file: .env
     depends_on:
       - mongo

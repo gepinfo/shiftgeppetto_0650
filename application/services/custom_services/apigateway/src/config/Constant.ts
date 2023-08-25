@@ -6,3 +6,4 @@ export const CAMUNDAURL = process.env.CAMUNDAURL;
 export const SYSTEMCREDENTIALMANAGERURL = process.env.SYSTEMCREDENTIALMANAGERURL;
 export const SYSTEMENTRYURL = process.env.SYSTEMENTRYURL;
 export const SHIFTTREECRUDURL = process.env.SHIFTTREECRUDURL;
+export const TYPESURL = process.env.TYPESURL;

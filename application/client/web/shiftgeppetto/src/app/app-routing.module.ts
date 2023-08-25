@@ -35,6 +35,7 @@ const routes: Routes = [
 { path : 'createtree', loadChildren: () => import('./createtree/createtree.module').then(m => m.CreatetreeModule), canActivate: [AuthGuard] } , 
 { path : 'updeltree', loadChildren: () => import('./updeltree/updeltree.module').then(m => m.UpdeltreeModule), canActivate: [AuthGuard] } , 
 { path : 'treedata', loadChildren: () => import('./treedata/treedata.module').then(m => m.TreedataModule), canActivate: [AuthGuard] } , 
+{ path : 'createtypes', loadChildren: () => import('./createtypes/createtypes.module').then(m => m.CreatetypesModule), canActivate: [AuthGuard] } , 
 ];
 
 @NgModule({

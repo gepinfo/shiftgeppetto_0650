@@ -63,6 +63,12 @@ service:
     port: 8011
     targetPort: 8011
 
+  types: 
+    name: types
+    type: NodePort
+    port: 8012
+    targetPort: 8012
+
 
 deployment:
   defaultImagePullPolicy: IfNotPresent
@@ -95,6 +101,10 @@ deployment:
   shifttreecrud: 
     name: shifttreecrud
     image: geppettotest/shiftgeppetto-shifttreecrud:1.0
+
+  types: 
+    name: types
+    image: geppettotest/shiftgeppetto-types:1.0
 
   camundapod:
      name: camundapod
